@@ -365,3 +365,50 @@ EXAMPLE:
 mk@khalid-VirtualBox:~$ echo my name is khalid
 
 My name is khalid
+
+
+
+
+
+
+
+
+
+*********System Calls*****************
+
+PROCESS
+     WINDOWS
+      UNIX
+     Process Control
+CreateProcess() ExitProcess() WaitForSingleObject()
+Fork() 
+Exit() 
+Wait()
+    File Manipulation
+CreateFile()
+ ReadFile()
+ WriteFile() 
+CloseHandle()
+Open() 
+Read() 
+Write() 
+Close()
+    Device Management
+SetConsoleMode() ReadConsole() WriteConsole()
+Ioctl() 
+Read() 
+Write()
+Information Maintenance
+GetCurrentProcessID() SetTimer() 
+Sleep()
+Getpid() 
+Alarm() 
+Sleep()
+        Communication
+CreatePipe() CreateFileMapping() MapViewOfFile()
+Pipe() 
+Shmget() 
+Mmap()
+           Protection
+SetFileSecurity() InitializeSecurityDescriptor() SetSecurityDescriptorgroup()
+Chmod() Umask() Chown()
