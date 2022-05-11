@@ -1,0 +1,47 @@
+#include <stdio.h> 
+
+#include <sys/types.h> 
+
+#include <unistd.h> 
+
+int main() 
+
+{ 
+
+ int x, y;
+
+ int i = fork();
+
+if (i == 0)
+
+ {
+
+printf("parent = %d, Child = %d\n", getppid(), getpid());
+
+}
+
+else if(i<0)
+
+{
+
+printf("Child process not created\n");
+
+}
+
+else
+
+{
+
+x = wait(NULL);
+
+y = waitpid(i,NULL,1);
+
+printf("parent = %d, GrandParent = %d\n", getpid(), getppid());
+
+printf("Child Process = %d Completed Execution\n", x);
+
+printf("GrandChild Process = %d Completed Execution\n", y);
+
+}
+
+}
