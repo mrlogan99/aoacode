@@ -1,0 +1,367 @@
+1. pwd command(print work directory):
+
+Use the pwd command to find out the path of the current working directory (folder) you’re in.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~$ pwd
+
+/home/mk
+
+2. cd command(change directory):
+
+To navigate through the Linux files and directories, use the cd command. It requires either the full path or the name of the directory, depending on the current working directory that you’re in.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~$ cd Music
+
+mk@khalid-VirtualBox:~/Music$
+
+3. ls command (list):
+
+The ls command is used to view the contents of a directory. By default, this command will display the contents of your current working directory.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~$ ls
+
+Desktop         Download               Music       Public          Videos
+
+Documents   exampls.desktop   Pictures   Templates 
+
+4. cat command(concatenate):
+
+cat (short for concatenate) is one of the most frequently used commands in Linux. It is used to list the contents of a file on the standard output (sdout).
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~/Documents/Example$ cat 20co35
+
+ I’m merchant khalid my roll no is 20co35
+
+5. cp command(copy paste):
+
+Use the cp command to copy files from the current directory to a different directory.  
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~/Pictures$ cp index.png index.png1
+
+mk@khalid-VirtualBox:~/Pictures$ ls
+
+index.png 
+
+index.png1
+
+6. mv command(move):
+
+The primary use of the mv command is to move files, although it can also be used to rename files.
+
+EXAMPLE:
+
+list of pictures
+
+mk@khalid-VirtualBox: /Pictures$ ls 
+
+index.png1 
+
+newimage 
+
+after using mv cmd
+
+mk@khalid-VirtualBox: ~/Pictures$ mv newimage ~/Documents
+
+mk@khalid-VirtualBox: ~/Pictures$ ls
+
+index.png1 
+
+moved file to documents
+
+mk@khalid-VirtualBox: ~/Documents$ ls
+
+Example newimage 'Untitled 1.odt'
+
+7. mkdir command(make directory):
+
+Use mkdir command to make a new directory — if you type mkdir Music it will create a directory called Music.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: /home$ mkdir khalid1
+
+mk@khalid-VirtualBox: /home$ ls
+
+Khalid1 khalid
+
+8. rmdir command (remove directory):
+
+If you need to delete a directory, use the rmdir command. However, rmdir only allows you to delete empty directories.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: /home$ sudo rmdir Asad
+
+mk@khalid-VirtualBox: /home$ ls
+
+khalid
+
+mk@khalid-VirtualBox: /home$
+
+9. rm command(remove):
+
+The rm command is used to delete directories and the contents within them. If you only want to delete the directory — as an alternative to rmdir — use rm-r.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~$ rm newfile1.txt
+
+mk@khalid-VirtualBox: ~$ ls
+
+Desktop         Download               Music       Public          Videos
+
+Documents   exampls.desktop   Pictures   Templates 
+
+mk@khalid-VirtualBox: ~$
+
+10. Rename command:
+
+The rename command is used to rename files. It is useful for renaming a large group of files. Its synatx is rename ‘s///’ *.txt
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~/Documents$ ls
+
+Example newimage.png 'Untitled 1.odt'
+
+mk@khalid-VirtualBox: ~/Documents$ rename 's/newimage/oldimage/' *.png
+
+mk@khalid-VirtualBox: /Documents$ ls
+
+Example oldimage.png 'Untitled 1.odt'
+
+mk@khalid-VirtualBox: ~/Documents$
+
+11. locate command:
+
+You can use this command to locate a file, just like the search command in Windows. 
+
+Syntex locat-ifile name 
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:locate-ipicture
+
+picture
+
+12. find command:
+
+Similar to the locate command, using find also searches for files and directories. The difference is, you use the find command to locate files within a given directory.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:locate-ipicture
+
+picture
+
+13. Id command:
+
+The id command is used to display the user ID (UID) and group ID (GID). Its syntax is id
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:l ~$ id 
+
+uid=1000(khalid) gid=1000(khalid) groups=1000(khalid),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(khalid)
+
+14. Cal command:
+
+The cal command is used to display the current month's calendar with the current date highlighted. Syntax is cal.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~$ cal
+
+February 2022 
+
+Su Mo Tu We Th Fr Sa 
+
+      1    2     3    4    5 
+
+6    7    8      9   10 11  12 
+
+13  14  15  16  17  18  19 
+
+20  21  22  23  24  25  26 
+
+27  28
+
+mk@khalid-VirtualBox: ~$
+
+15. Exit command:
+
+Linux exit command is used to exit from the current shell. It takes a parameter as a number and exits the shell with a return of status number. Syntax is exit it will exit or close the terminal.
+
+16. Mail command:
+
+The mail command is used to send emails from the command line. its syntax is mail -s "Subject"
+
+17. head command:
+
+The head command is used to view the first lines of any text file. By default, it will show the first ten lines, but you can change this number to your liking.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~/Documents/Example$ head 20co35
+
+1
+
+2
+
+2
+
+3
+
+45
+
+4
+
+4
+
+3
+
+4
+
+18. tail command:
+
+This one has a similar function to the head command, but instead of showing the first lines, the tail command will display the last ten lines of a text file.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~/Documents/Example$ tail 20co35
+
+4 
+
+78 
+
+95 
+
+746 
+
+54 
+
+22 
+
+2579 
+
+148
+
+19. more command:
+
+The more command is quite similar to the cat command, as it is used to display the file content in the same way that the cat command does. The only difference between both commands is that, in case of larger files, the more command displays screenful output at a time. 
+
+Enter key: To scroll down page by line. 
+
+Space bar: To move to the next page. 
+
+b key: To move to the previous page. 
+
+/ key: To search the string.
+
+20. Tac command:
+
+The tac command is the reverse of cat command, as its name specified. It displays the file content in reverse order (from the last line). 
+
+Its Syntax is tac<filename>
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: ~/Documents/Example$ tac 20co35
+
+148 
+
+2579 
+
+22
+
+21. We command:
+
+The wc command is used to count the lines, words, and characters in a file. Syntax is wc<file name>.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~/Documents$ wc largetextfile.odt
+
+94 562 28217 largetextfile.odt
+
+22. Date command:
+
+The date command is used to display date, time, time zone, and more. Syntax is date.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~$date
+
+Thursday 03 february 2022 04:19:38 PM IST
+
+23. Clear command:
+
+Linux clear command is used to clear the terminal screen. Syntax is clear and it will clear the termina.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~$ clear
+
+mk@khalid-VirtualBox:~$
+
+24. history command:
+
+When you’ve been using Linux for a certain period of time, you’ll quickly notice that you can run hundreds of commands every day. As such, running history command is particularly useful if you want to review the commands you’ve entered before.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~$ history
+
+1 pwd
+
+2 cd 
+
+3 cd desktop
+
+4 cd download
+
+5 cd home
+
+….................
+
+history
+
+25. zip, unzip command:
+
+Use the zip command to compress your files into a zip archive, and use the unzip command to extract the zipped files from a zip archive.
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~$ zip picture
+
+mk@khalid-VirtualBox:~$ unzip picture
+
+26. host command:
+
+The host command is used to display the IP address for a given domain name and vice versa. It performs the DNS lookups for the DNS Query. Its syntax is host< domain name > or< ip address >
+
+EXAMPLE:
+
+mk@khalid-VirtualBox: /$ host khalid-VirtualBox
+
+27. echo command:
+
+This command is used to display a line.
+
+Syntex echo<to print>
+
+EXAMPLE:
+
+mk@khalid-VirtualBox:~$ echo my name is khalid
+
+My name is khalid
