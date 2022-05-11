@@ -1,0 +1,191 @@
+#!/bin/sh 
+
+echo "a. Displaying OS version, release number and kernel number:" 
+
+echo 
+
+echo " ***OS version***" cat /etc/os-release 
+
+echo 
+
+echo " ***Release Number***" cat /proc/sys/kernel/osrelease 
+
+echo 
+
+echo " ***Kernel Version***" cat /proc/sys/kernel/version 
+
+echo 
+
+echo "b. Displaying Top 10 Processes in descending order " 
+
+echo ps -aux | head -n 10 
+
+echo 
+
+echo "c. Displaying processes with high memory usage" 
+
+echo ps aux --sort -rss | head 
+
+echo 
+
+echo "d. Displaying current logged in user and log name" 
+
+echo 
+
+who 
+
+Whoami 
+
+echo 
+
+echo "e. Displaying current shell, home directory, os type, current path setting, current working directory" 
+
+echo 
+
+echo "Displaying Current Shell => $SHELL" 
+
+echo "Displaying Home Directory => $HOME"
+
+echo "Displaying Operating System Type => $OSTYPE" cat /proc/sys/kernel/ostype 
+
+echo "Displaying Current Path Setting => $PATH" 
+
+echo "Displaying Current Working Directory=> $PWD" 
+
+OUTPUT: 
+
+a. Displaying OS version, release number and kernel number: 
+
+***OS version*** 
+
+PRETTY_NAME="Kali GNU/Linux Rolling" 
+
+NAME="Kali GNU/Linux" 
+
+ID=kali 
+
+VERSION="2021.4" 
+
+VERSION_ID="2021.4" 
+
+VERSION_CODENAME="kali-rolling" 
+
+ID_LIKE=debian 
+
+ANSI_COLOR="1;31" 
+
+HOME_URL="https://www.kali.org/" 
+
+SUPPORT_URL="https://forums.kali.org/" 
+
+BUG_REPORT_URL="https://bugs.kali.org/" 
+
+***Release Number*** 
+
+5.14.0-kali4-amd64 
+
+***Kernel Version*** 
+
+#1 SMP Debian 5.14.16-1kali1 (2021-11-05) 
+
+b. Displaying Top 10 Processes in descending order: 
+
+USER 		PID  %CPU  %MEM      VSZ      RSS  TTY    STAT     START      TIME COMMAND 
+
+root      		1        0.0         0.2      164264   10652 ?      Ss         00:15       0:01 
+
+/sbin/init splash 
+
+root 		2       0.0         0.0            0              0 ?         S           00:15       0:00 
+
+[kthreadd] 
+
+root 		3       0.0         0.0            0              0 ?          I<         00:15       0:00 
+
+[rcu_gp] 
+
+root 		4 	0.0 	0.0 	0 	0 ? 	I< 	00:15	0:00 
+
+[rcu_par_gp] 
+
+root 		5 	0.1 	0.0 	0 	0 ? 	I 	00:15 	0:03 
+
+[kworker/0:0-events] 
+
+Root 		6 	0.0 	0.0 	0 	0 ? 	I< 	00:15 	0:00 
+
+[kworker/0:0H-events_highpri] 
+
+root 		8 	0.0 	0.0 	0 	0 ? 	I< 	00:15 	0:00 
+
+[mm_percpu_wq] 
+
+root		 9 	0.0 	0.0 	0 	0 ? 	S 	00:15 	0:00 
+
+[rcu_tasks_rude_] 
+
+root 		10 	0.0 	0.0 	0 	0 ? 	S 	00:15 	0:00 
+
+[rcu_tasks_trace] 
+
+c. Displaying processes with high memory usage: 
+
+USER 		PID 	%CPU 	%MEM		VSZ 	RSS 	TTY 	STAT 	START 	TIME 
+
+COMMAND 
+
+Root 		583 	1.6 	3.2 		355748 	117140 	tty7 	Ssl+ 	00:16 	0:50 
+
+/usr/lib/xorg/Xorg :0 -seat seat0 -auth /var/run/lightdm/root/:0 - 
+
+nolisten tcp vt7 –novtswitch 
+
+kali 		928 	0.5 	2.4 		922444 	87928 	? 	Sl 	00:16 	0:17 
+
+xfwm4 
+
+kali 		1318 	0.2 	2.3 		400356 	82920 	? 	Sl 	00:17 	0:08 
+
+/usr/bin/qterminal 
+
+kali 		2116 	0.1 	2.2 		400180 	80820 	? 	Sl 	00:20 	0:04
+
+/usr/bin/qterminal 
+
+Kali 		1010 	0.0 	1.3 		370028 	47708 	? 	Sl 	00:16 	0:00 
+
+/usr/bin/python3 /usr/bin/blueman-applet 
+
+Kali 		970 	0.1 	1.2 		464232 	43468 	? 	Sl 	00:16 	0:03 
+
+/usr/lib/x86_64-linux-gnu/xfce4/panel/wrapper-2.0 /usr/lib/x86_64- linuxgnu/xfce4/panel/plugins/libwhiskermenu.so 1 16777223 whiskermenu Whisker Menu Show a menu to easily access installed applications 
+
+Kali 		9814 	1.3 	1.1 		466964 	40396 	? 	Sl 	00:51 	0:12 
+
+mousepad 
+
+kali 		969 	0.0 	1.0 		431136 	39408 	? 	Sl 	00:16 	0:01 
+
+xfdesktop 
+
+kali 		960 	0.1 	1.0 		470956 	39104 	? 	Sl 	00:16 	0:05 
+
+xfce4-panel 
+
+d. Displaying current logged in user and log name: 
+
+Kali 	tty7 		2022-02-09 00:16 (:0) 
+
+Kali 
+
+Displaying Current Shell => /usr/bin/zsh 
+
+Displaying Home Directory => /home/kali 
+
+Displaying Operating System Type => 
+
+Linux 
+
+Displaying Current Path Setting => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/loca l/games:/usr/games 
+
+Displaying Current Working Directory=> /home/kali
